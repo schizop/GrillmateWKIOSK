@@ -1,0 +1,103 @@
+GRILLMATE POS MANAGEMENT SYSTEM - PRODUCT REQUIREMENTS DOCUMENT
+
+1. SYSTEM OVERVIEW
+==================
+Customer Kiosk (Order Entry): Allows customers to browse the menu, select a vacant table, place orders, and receive an order number.
+
+Staff Interface: Handles order processing, billing, table management, and administrative tasks.
+
+2. SYSTEM USERS
+===============
+Customer – Uses the kiosk to place and review orders.
+Staff/Cashier – Manages payments, order fulfillment, and order history.
+Admin – Manages staff accounts, menu items, and system configurations.
+
+3. CORE MODULES & FEATURES
+==========================
+
+A. ORDER ENTRY (KIOSK)
+-----------------------
+- Displays available/vacant tables
+- Allows the customer to select a table
+- Displays categorized menu items (with image, name, price, description)
+- Customers can add/remove items from the cart
+- Checkout screen shows order summary and total
+- Generates an Order Number upon confirmation
+- Displays an instruction: "Please give this number to the cashier for payment."
+- Sends order details to the staff dashboard for processing
+
+B. TABLE MANAGEMENT
+-------------------
+- Shows all tables with real-time status:
+  * Vacant
+  * Occupied (Unpaid)
+  * Occupied (Paid)
+  * Reserved
+- Staff can manually change table status if needed
+- Links tables to corresponding active orders
+
+C. BILLING
+----------
+- Staff can search and retrieve an order using the Order Number
+- Displays the full order list and total amount
+- Payment processing (cash, or e-wallet)
+- After successful payment, updates order status to Paid
+- Option to print or email receipt
+
+D. ORDER HISTORY
+----------------
+- Stores all past orders
+- Filter by date, table number, cashier, or payment status
+- Each record includes order number, date/time, items, total, and payment type
+
+E. REPORTING AND ANALYTICS
+---------------------------
+Dashboard showing:
+- Daily/weekly/monthly sales summary
+- Top-selling items
+- Peak hours
+
+F. SETTINGS / ADMIN PAGE
+------------------------
+User Management:
+- Add, edit, or deactivate staff accounts
+- Assign roles (Admin, Cashier,)
+
+Menu Management:
+- Add/edit/delete menu items
+- Upload images and set prices
+- Assign items to categories
+
+Table Management:
+- Add/edit/delete tables
+
+G. RESERVATION PAGE
+-------------------
+- Customers (or staff) can create table reservations
+- Includes date, time, name, contact number, and number of guests
+- Reserved tables are marked unavailable for kiosk walk-ins
+
+H. DELIVERY PAGE
+----------------
+- Allows staff to take delivery orders manually
+- Includes customer info (name, address, contact)
+- Integrates with the same menu database
+- Delivery status tracking: Pending, On the Way, Delivered
+- Option for assigning delivery staff
+
+5. SYSTEM FLOW SUMMARY
+======================
+Customer (Kiosk): Select vacant table → choose menu items → checkout → receive order number.
+Staff (POS): Input order number → confirm order and payment → update table status.
+System: Logs all transactions → updates analytics → syncs across all devices.
+
+FOCUS: KIOSK INTERFACE IMPLEMENTATION
+=====================================
+Priority features for initial development:
+1. Table selection interface
+2. Menu browsing with categories
+3. Shopping cart functionality
+4. Order confirmation and number generation
+5. Basic UI/UX for customer interaction
+
+
