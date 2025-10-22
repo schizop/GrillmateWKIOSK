@@ -57,7 +57,7 @@ Partial Class MenuDashboardForm
         lblCartTitle.AutoSize = True
         lblCartTitle.Font = New Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblCartTitle.ForeColor = Color.FromArgb(CByte(33), CByte(37), CByte(41))
-        lblCartTitle.Location = New Point(23, 23)
+        lblCartTitle.Location = New Point(9, 22)
         lblCartTitle.Name = "lblCartTitle"
         lblCartTitle.Size = New Size(60, 29)
         lblCartTitle.TabIndex = 0
@@ -67,9 +67,9 @@ Partial Class MenuDashboardForm
         ' 
         pnlCartItems.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         pnlCartItems.AutoScroll = True
-        pnlCartItems.Location = New Point(23, 69)
+        pnlCartItems.Location = New Point(9, 68)
         pnlCartItems.Name = "pnlCartItems"
-        pnlCartItems.Size = New Size(253, 841)
+        pnlCartItems.Size = New Size(286, 841)
         pnlCartItems.TabIndex = 1
         ' 
         ' lblTotal

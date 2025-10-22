@@ -31,7 +31,7 @@ Partial Class LoginForm
         lblWelcome.AutoSize = True
         lblWelcome.Font = New Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblWelcome.ForeColor = Color.FromArgb(CByte(255), CByte(0), CByte(0))
-        lblWelcome.Location = New Point(13, 9)
+        lblWelcome.Location = New Point(551, 72)
         lblWelcome.Margin = New Padding(4, 0, 4, 0)
         lblWelcome.Name = "lblWelcome"
         lblWelcome.Size = New Size(307, 75)
@@ -46,12 +46,13 @@ Partial Class LoginForm
         btnStartOrder.FlatStyle = FlatStyle.Flat
         btnStartOrder.Font = New Font("Arial", 28F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnStartOrder.ForeColor = Color.White
-        btnStartOrder.Location = New Point(137, 239)
+        btnStartOrder.Location = New Point(563, 369)
         btnStartOrder.Margin = New Padding(4, 3, 4, 3)
         btnStartOrder.Name = "btnStartOrder"
         btnStartOrder.Size = New Size(320, 80)
         btnStartOrder.TabIndex = 2
         btnStartOrder.Text = "Customer Kiosk"
+        btnStartOrder.TextAlign = ContentAlignment.MiddleRight
         btnStartOrder.UseVisualStyleBackColor = False
         ' 
         ' LoginForm

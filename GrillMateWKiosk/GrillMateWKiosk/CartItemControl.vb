@@ -7,13 +7,6 @@ Public Class CartItemControl
     Public Event ItemRemoved As EventHandler(Of ItemRemovedEventArgs)
 
     Private _cartItem As MenuDashboardForm.CartItem
-    Private lblItemName As Label
-    Private lblPrice As Label
-    Private lblSubtotal As Label
-    Private btnDecrease As Button
-    Private btnIncrease As Button
-    Private lblQuantity As Label
-    Private btnRemove As Button
 
     Public Property CartItem As MenuDashboardForm.CartItem
         Get
@@ -27,87 +20,9 @@ Public Class CartItemControl
 
     Public Sub New()
         InitializeComponent()
-    End Sub
-
-    Private Sub InitializeComponent()
-        Me.Size = New Size(250, 60)
-        Me.BackColor = Color.White
-        Me.BorderStyle = BorderStyle.FixedSingle
-        Me.Margin = New Padding(2)
-
-        ' Item Name Label
-        lblItemName = New Label()
-        lblItemName.Location = New Point(5, 5)
-        lblItemName.Size = New Size(120, 20)
-        lblItemName.Font = New Font("Arial", 10, FontStyle.Bold)
-        lblItemName.ForeColor = Color.FromArgb(33, 37, 41)
-
-        ' Price Label
-        lblPrice = New Label()
-        lblPrice.Location = New Point(5, 25)
-        lblPrice.Size = New Size(60, 15)
-        lblPrice.Font = New Font("Arial", 9)
-        lblPrice.ForeColor = Color.Gray
-
-        ' Subtotal Label
-        lblSubtotal = New Label()
-        lblSubtotal.Location = New Point(70, 25)
-        lblSubtotal.Size = New Size(60, 15)
-        lblSubtotal.Font = New Font("Arial", 9, FontStyle.Bold)
-        lblSubtotal.ForeColor = Color.FromArgb(40, 167, 69)
-
-        ' Decrease Button
-        btnDecrease = New Button()
-        btnDecrease.Text = "-"
-        btnDecrease.Size = New Size(25, 25)
-        btnDecrease.Location = New Point(140, 20)
-        btnDecrease.Font = New Font("Arial", 12, FontStyle.Bold)
-        btnDecrease.BackColor = Color.FromArgb(220, 53, 69)
-        btnDecrease.ForeColor = Color.White
-        btnDecrease.FlatStyle = FlatStyle.Flat
-        btnDecrease.FlatAppearance.BorderSize = 0
-        btnDecrease.Cursor = Cursors.Hand
-
-        ' Quantity Label
-        lblQuantity = New Label()
-        lblQuantity.Text = "1"
-        lblQuantity.Size = New Size(30, 25)
-        lblQuantity.Location = New Point(170, 20)
-        lblQuantity.Font = New Font("Arial", 12, FontStyle.Bold)
-        lblQuantity.TextAlign = ContentAlignment.MiddleCenter
-        lblQuantity.ForeColor = Color.FromArgb(33, 37, 41)
-
-        ' Increase Button
-        btnIncrease = New Button()
-        btnIncrease.Text = "+"
-        btnIncrease.Size = New Size(25, 25)
-        btnIncrease.Location = New Point(205, 20)
-        btnIncrease.Font = New Font("Arial", 12, FontStyle.Bold)
-        btnIncrease.BackColor = Color.FromArgb(40, 167, 69)
-        btnIncrease.ForeColor = Color.White
-        btnIncrease.FlatStyle = FlatStyle.Flat
-        btnIncrease.FlatAppearance.BorderSize = 0
-        btnIncrease.Cursor = Cursors.Hand
-
-        ' Remove Button
-        btnRemove = New Button()
-        btnRemove.Text = "×"
-        btnRemove.Size = New Size(20, 20)
-        btnRemove.Location = New Point(225, 5)
-        btnRemove.Font = New Font("Arial", 14, FontStyle.Bold)
-        btnRemove.BackColor = Color.Transparent
-        btnRemove.ForeColor = Color.Red
-        btnRemove.FlatStyle = FlatStyle.Flat
-        btnRemove.FlatAppearance.BorderSize = 0
-        btnRemove.Cursor = Cursors.Hand
-
-        ' Add event handlers
         AddHandler btnDecrease.Click, AddressOf BtnDecrease_Click
         AddHandler btnIncrease.Click, AddressOf BtnIncrease_Click
         AddHandler btnRemove.Click, AddressOf BtnRemove_Click
-
-        ' Add controls to the user control
-        Me.Controls.AddRange({lblItemName, lblPrice, lblSubtotal, btnDecrease, lblQuantity, btnIncrease, btnRemove})
     End Sub
 
     Private Sub UpdateDisplay()
