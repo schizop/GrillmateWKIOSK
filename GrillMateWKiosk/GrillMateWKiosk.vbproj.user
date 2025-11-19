@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="Kiosk\DineInOrTakeout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Kiosk\MenuDashboardForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_Analytics.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_Billing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_Delivery.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_OrderHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_Reservation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Kiosk\CartItemControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Kiosk\OrderConfirmationForm.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Kiosk\OrderSummaryConfirmation.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Kiosk\TableSelectionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LoginForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staff\StaffMenuDashboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_TableManagement.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

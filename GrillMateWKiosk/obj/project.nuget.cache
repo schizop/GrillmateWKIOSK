@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "/404us/zH+c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dodong\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\microsoft.web.webview2\\1.0.2849.39\\microsoft.web.webview2.1.0.2849.39.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\questpdf\\2024.10.3\\questpdf.2024.10.3.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\system.data.sqlclient\\4.8.6\\system.data.sqlclient.4.8.6.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
+    "C:\\Users\\Dodong\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "GrillMateWKiosk depends on Microsoft.Web.WebView2 (>= 1.0.2822.4001) but Microsoft.Web.WebView2 1.0.2822.4001 was not found. Microsoft.Web.WebView2 1.0.2849.39 was resolved instead.",
+      "projectPath": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+      "libraryId": "Microsoft.Web.WebView2",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
