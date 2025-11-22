@@ -3,56 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\data\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\data\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\reservationcard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\reservationcard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_delivery.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_delivery.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\database_schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\database_schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_delivery.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_delivery.designer.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\database_migration_adddiscounttax.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\database_migration_adddiscounttax.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_manualorderentry.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_manualorderentry.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\admin_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\admin_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\managemenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\managemenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_tablemanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_tablemanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_delivery.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_delivery.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\data\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\data\\databaseconnection.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\adminform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\adminform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\productoperation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\productoperation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\managemenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\managemenu.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\deleteproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\deleteproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\addproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\addproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\grillmatewkiosk.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\grillmatewkiosk.vbproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_manualorderentry.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_manualorderentry.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\orderconfirmationform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -63,12 +79,108 @@
       "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\ordersummaryconfirmation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\staffmenudashboard.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\productcardcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\productcardcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\tablecardcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\tablecardcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\menudashboardform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\menudashboardform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\categorycontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\categorycontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\cartitemcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\cartitemcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\registeruser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\registeruser.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\updateproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\updateproduct.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\admin\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\admin\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\receipt generator.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\receipt generator.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\receiptpreviewcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\receiptpreviewcontrol.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_billing.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\applicationevents.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\tableselectionform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\kiosk\\dineinortakeout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\database_schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\database_schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\loginform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\loginform.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\prd_grillmatepos.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\prd_grillmatepos.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_reservation.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_orderhistory.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|c:\\users\\dodong\\source\\repos\\grillmatewkiosk\\grillmatewkiosk\\staff\\uc_tablemanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{C75CD266-49D3-47E2-A67D-2C3640AE2F84}|GrillMateWKiosk\\GrillMateWKiosk.vbproj|solutionrelative:grillmatewkiosk\\staff\\uc_tablemanagement.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Analytics.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GrillMateWKiosk\\Staff\\UC_Analytics.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,21 +190,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DatabaseConnection.vb",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Data\\DatabaseConnection.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Data\\DatabaseConnection.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Data\\DatabaseConnection.vb",
-              "RelativeToolTip": "GrillMateWKiosk\\Data\\DatabaseConnection.vb",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAswA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "UC_ManualOrderEntry.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "ViewState": "AgIAAMQBAAAAAAAAAAASwOYBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-01T14:11:45.608Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T01:01:00.451Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReservationCard.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\ReservationCard.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\ReservationCard.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\ReservationCard.vb [Design]*",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\ReservationCard.vb [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T04:07:28.869Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Bookmark",
@@ -112,193 +235,518 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Database_Schema.sql",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Schema.sql",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Database_Schema.sql",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Schema.sql",
-              "RelativeToolTip": "GrillMateWKiosk\\Database_Schema.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-19T01:48:06.936Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "UC_Delivery.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.vb",
               "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Delivery.vb",
               "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.vb [Design]",
               "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Delivery.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T05:33:19.979Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UC_Reservation.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Reservation.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Reservation.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T05:33:12.007Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UC_OrderHistory.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-16T04:17:30.922Z",
+              "WhenOpened": "2025-11-21T02:03:12.239Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UC_Billing.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Billing.vb [Design]",
+              "Title": "UC_Delivery.Designer.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.Designer.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Delivery.Designer.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.Designer.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Delivery.Designer.vb",
+              "ViewState": "AgIAACsBAAAAAAAAAAAAAEEBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T03:33:20.569Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-22T03:11:41.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UC_Billing.vb",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Billing.vb",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAYwBsDAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T03:49:47.631Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Database_Migration_AddDiscountTax.sql",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Migration_AddDiscountTax.sql",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Database_Migration_AddDiscountTax.sql",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Migration_AddDiscountTax.sql",
-              "RelativeToolTip": "GrillMateWKiosk\\Database_Migration_AddDiscountTax.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-11-19T01:48:09.842Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UC_OrderHistory.vb",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-18T04:18:51.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ApplicationEvents.vb",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\ApplicationEvents.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\ApplicationEvents.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\ApplicationEvents.vb",
-              "RelativeToolTip": "GrillMateWKiosk\\ApplicationEvents.vb",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-07T08:52:37.593Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "DineInOrTakeout.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-16T04:12:07.76Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "TableSelectionForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-16T04:17:47.89Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UC_TableManagement.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_TableManagement.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_TableManagement.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_TableManagement.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_TableManagement.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T05:32:48.938Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OrderConfirmationForm.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T04:57:20.166Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "OrderSummaryConfirmation.vb [Design]",
-              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb",
-              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb",
-              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb [Design]",
-              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T04:57:19.085Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "StaffMenuDashboard.vb [Design]",
               "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
               "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
               "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb [Design]",
               "RelativeToolTip": "GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T04:56:18.206Z",
+              "WhenOpened": "2025-11-21T01:04:30.291Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaffMenuDashboard.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\StaffMenuDashboard.vb",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAswHkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T03:04:20.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "UC_Analytics.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Analytics.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Analytics.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Analytics.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Analytics.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:04:28.977Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Admin_OrderHistory.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Admin_OrderHistory.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\Admin_OrderHistory.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Admin_OrderHistory.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\Admin_OrderHistory.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:47.693Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ManageMenu.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T03:07:21.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UC_Delivery.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Delivery.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Delivery.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Delivery.vb",
+              "ViewState": "AgIAALYAAAAAAAAAAAAAwA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T03:11:57.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DatabaseConnection.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Data\\DatabaseConnection.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Data\\DatabaseConnection.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Data\\DatabaseConnection.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Data\\DatabaseConnection.vb",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T03:12:52.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdminForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\AdminForm.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\AdminForm.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\AdminForm.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\AdminForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:55.751Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DeleteProduct.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\DeleteProduct.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\DeleteProduct.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\DeleteProduct.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\DeleteProduct.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:57.932Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductOperation.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ProductOperation.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\ProductOperation.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ProductOperation.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\ProductOperation.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:59.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AddProduct.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\AddProduct.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\AddProduct.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\AddProduct.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\AddProduct.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:41.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GrillMateWKiosk",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+              "RelativeToolTip": "GrillMateWKiosk\\GrillMateWKiosk.vbproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003380|",
+              "WhenOpened": "2025-11-22T03:07:02.311Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ManageMenu.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\ManageMenu.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\ManageMenu.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\ManageMenu.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:53:59.887Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
+              "Title": "UC_ManualOrderEntry.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_ManualOrderEntry.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:29:06.959Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderSummaryConfirmation.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\OrderSummaryConfirmation.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:47:24.097Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProductCardControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\ProductCardControl.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\ProductCardControl.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\ProductCardControl.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\ProductCardControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:44:13.392Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TableCardControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableCardControl.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\TableCardControl.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableCardControl.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\TableCardControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:44:11.838Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TableSelectionForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:57:01.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderConfirmationForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\OrderConfirmationForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:47:26.795Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MenuDashboardForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\MenuDashboardForm.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\MenuDashboardForm.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\MenuDashboardForm.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\MenuDashboardForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:44:17.677Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DineInOrTakeout.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:18:03.623Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CategoryControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\CategoryControl.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\CategoryControl.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\CategoryControl.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\CategoryControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:37:10.764Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CartItemControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\CartItemControl.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\CartItemControl.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\CartItemControl.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\CartItemControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:44:19.42Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Users.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Users.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\Users.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Users.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\Users.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:55:01.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Users.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Users.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\Users.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\Users.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\Users.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:54:12.647Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RegisterUser.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\RegisterUser.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\RegisterUser.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\RegisterUser.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\RegisterUser.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:54:05.47Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateProduct.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\UpdateProduct.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\UpdateProduct.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\UpdateProduct.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\UpdateProduct.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:54:07.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\README.md",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Admin\\README.md",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Admin\\README.md",
+              "RelativeToolTip": "GrillMateWKiosk\\Admin\\README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-11-22T02:54:03.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Receipt Generator.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\Receipt Generator.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\Receipt Generator.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\Receipt Generator.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\Receipt Generator.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T02:31:00.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UC_Billing.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Billing.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Billing.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Billing.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:57:44.019Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ReceiptPreviewControl.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\ReceiptPreviewControl.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\ReceiptPreviewControl.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\ReceiptPreviewControl.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\ReceiptPreviewControl.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T01:57:27.35Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "ApplicationEvents.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\ApplicationEvents.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\ApplicationEvents.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\ApplicationEvents.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\ApplicationEvents.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:48:32.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "TableSelectionForm.vb",
               "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
               "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
               "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
               "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\TableSelectionForm.vb",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAowEIAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2025-11-08T04:57:46.307Z"
+              "WhenOpened": "2025-11-22T00:57:03.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DineInOrTakeout.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Kiosk\\DineInOrTakeout.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:55:25.856Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Database_Schema.sql",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Schema.sql",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Database_Schema.sql",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Database_Schema.sql",
+              "RelativeToolTip": "GrillMateWKiosk\\Database_Schema.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-22T00:54:56.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "PRD_GrillMatePOS.txt",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\PRD_GrillMatePOS.txt",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\PRD_GrillMatePOS.txt",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\PRD_GrillMatePOS.txt",
+              "RelativeToolTip": "GrillMateWKiosk\\PRD_GrillMatePOS.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-11-22T00:48:38.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "LoginForm.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\LoginForm.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\LoginForm.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\LoginForm.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\LoginForm.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-22T00:48:45.498Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "UC_Reservation.vb",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAALwBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T03:50:09.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "UC_Reservation.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_Reservation.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_Reservation.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_Reservation.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T07:14:34.571Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "UC_OrderHistory.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_OrderHistory.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_OrderHistory.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:04:24.495Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "UC_TableManagement.vb [Design]",
+              "DocumentMoniker": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_TableManagement.vb",
+              "RelativeDocumentMoniker": "GrillMateWKiosk\\Staff\\UC_TableManagement.vb",
+              "ToolTip": "C:\\Users\\Dodong\\source\\repos\\GrillMateWKiosk\\GrillMateWKiosk\\Staff\\UC_TableManagement.vb [Design]",
+              "RelativeToolTip": "GrillMateWKiosk\\Staff\\UC_TableManagement.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-11-21T01:04:34.939Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

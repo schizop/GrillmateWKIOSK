@@ -44,7 +44,7 @@ Partial Class UC_TableManagement
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Segoe UI", 24F, FontStyle.Bold)
         lblTitle.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lblTitle.Location = New Point(150, 97)
+        lblTitle.Location = New Point(205, 112)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(306, 45)
         lblTitle.TabIndex = 0
@@ -52,14 +52,14 @@ Partial Class UC_TableManagement
         ' 
         ' pnlTableGrid
         ' 
-         pnlTableGrid.AutoScroll = True
-         pnlTableGrid.BackColor = Color.White
-         pnlTableGrid.BorderStyle = BorderStyle.FixedSingle
-         pnlTableGrid.Location = New Point(150, 157)
-         pnlTableGrid.Name = "pnlTableGrid"
-         pnlTableGrid.Size = New Size(1000, 600)
-         pnlTableGrid.TabIndex = 1
-         pnlTableGrid.AutoScrollMargin = New Size(10, 10)
+        pnlTableGrid.AutoScroll = True
+        pnlTableGrid.AutoScrollMargin = New Size(10, 10)
+        pnlTableGrid.BackColor = Color.White
+        pnlTableGrid.BorderStyle = BorderStyle.FixedSingle
+        pnlTableGrid.Location = New Point(205, 172)
+        pnlTableGrid.Name = "pnlTableGrid"
+        pnlTableGrid.Size = New Size(1000, 600)
+        pnlTableGrid.TabIndex = 1
         ' 
         ' btnRefresh
         ' 
@@ -68,7 +68,7 @@ Partial Class UC_TableManagement
         btnRefresh.FlatStyle = FlatStyle.Flat
         btnRefresh.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         btnRefresh.ForeColor = Color.White
-        btnRefresh.Location = New Point(150, 777)
+        btnRefresh.Location = New Point(205, 792)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(120, 40)
         btnRefresh.TabIndex = 2
@@ -80,7 +80,7 @@ Partial Class UC_TableManagement
         lblStatusInfo.AutoSize = True
         lblStatusInfo.Font = New Font("Segoe UI", 10F)
         lblStatusInfo.ForeColor = Color.FromArgb(CByte(52), CByte(73), CByte(94))
-        lblStatusInfo.Location = New Point(290, 787)
+        lblStatusInfo.Location = New Point(345, 802)
         lblStatusInfo.Name = "lblStatusInfo"
         lblStatusInfo.Size = New Size(213, 19)
         lblStatusInfo.TabIndex = 3
@@ -93,7 +93,7 @@ Partial Class UC_TableManagement
         pnlControls.Controls.Add(btnSetReserved)
         pnlControls.Controls.Add(btnSetOccupied)
         pnlControls.Controls.Add(btnSetVacant)
-        pnlControls.Location = New Point(1170, 182)
+        pnlControls.Location = New Point(1225, 197)
         pnlControls.Name = "pnlControls"
         pnlControls.Size = New Size(200, 162)
         pnlControls.TabIndex = 4
@@ -145,7 +145,7 @@ Partial Class UC_TableManagement
         lblSelectedTable.AutoSize = True
         lblSelectedTable.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
         lblSelectedTable.ForeColor = Color.FromArgb(CByte(41), CByte(128), CByte(185))
-        lblSelectedTable.Location = New Point(1170, 377)
+        lblSelectedTable.Location = New Point(1225, 392)
         lblSelectedTable.Name = "lblSelectedTable"
         lblSelectedTable.Size = New Size(124, 21)
         lblSelectedTable.TabIndex = 5
@@ -158,7 +158,7 @@ Partial Class UC_TableManagement
         pnlTableInfo.Controls.Add(lblLastUpdated)
         pnlTableInfo.Controls.Add(lblTableStatus)
         pnlTableInfo.Controls.Add(lblTableNumber)
-        pnlTableInfo.Location = New Point(1170, 407)
+        pnlTableInfo.Location = New Point(1225, 422)
         pnlTableInfo.Name = "pnlTableInfo"
         pnlTableInfo.Size = New Size(200, 150)
         pnlTableInfo.TabIndex = 6

@@ -103,7 +103,7 @@
     Private Sub LoadReservationControl()
         ' Clear existing content
         ContentPanel.Controls.Clear()
-        
+
         ' Create and load reservation control
         Dim reservationControl As New UC_Reservation()
         reservationControl.Dock = DockStyle.Fill
@@ -118,11 +118,22 @@
     Private Sub LoadDeliveryControl()
         ' Clear existing content
         ContentPanel.Controls.Clear()
-        
+
         ' Create and load delivery control
         Dim deliveryControl As New UC_Delivery()
         deliveryControl.Dock = DockStyle.Fill
         ContentPanel.Controls.Add(deliveryControl)
+    End Sub
+
+    Private Sub ManualOrderButton_Click(sender As Object, e As EventArgs) Handles ManualOrderButton.Click
+        LoadManualOrderControl()
+    End Sub
+
+    Private Sub LoadManualOrderControl()
+        ContentPanel.Controls.Clear()
+        Dim manualOrderControl As New UC_ManualOrderEntry()
+        manualOrderControl.Dock = DockStyle.Fill
+        ContentPanel.Controls.Add(manualOrderControl)
     End Sub
 
 End Class

@@ -28,7 +28,7 @@ Partial Class OrderConfirmationForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container()
+        components = New ComponentModel.Container()
         lblOrderNumber = New Label()
         lblOrderConfirmationTitle = New Label()
         lblPaymentInstruction = New Label()
@@ -36,16 +36,12 @@ Partial Class OrderConfirmationForm
         timerAutoReturn = New Timer(components)
         SuspendLayout()
         ' 
-        ' timerAutoReturn
-        ' 
-        timerAutoReturn.Interval = 20000
-        ' 
         ' lblOrderNumber
         ' 
         lblOrderNumber.AutoSize = True
         lblOrderNumber.Font = New Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblOrderNumber.ForeColor = Color.White
-        lblOrderNumber.Location = New Point(824, 386)
+        lblOrderNumber.Location = New Point(854, 384)
         lblOrderNumber.Margin = New Padding(4, 0, 4, 0)
         lblOrderNumber.Name = "lblOrderNumber"
         lblOrderNumber.Size = New Size(176, 75)
@@ -91,6 +87,10 @@ Partial Class OrderConfirmationForm
         btnNewOrder.TabIndex = 2
         btnNewOrder.Text = "New Order"
         btnNewOrder.UseVisualStyleBackColor = False
+        ' 
+        ' timerAutoReturn
+        ' 
+        timerAutoReturn.Interval = 20000
         ' 
         ' OrderConfirmationForm
         ' 

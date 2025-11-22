@@ -10,6 +10,7 @@
         "dependencies": {
           "Microsoft.Web.WebView2": "1.0.2849.39",
           "QuestPDF": "2024.10.3",
+          "ScottPlot.WinForms": "4.1.66",
           "System.Data.SqlClient": "4.8.6",
           "Microsoft.Web.WebView2.Core": "1.0.2849.39",
           "Microsoft.Web.WebView2.WinForms": "1.0.2849.39",
@@ -19,7 +20,7 @@
           "GrillMateWKiosk.dll": {}
         }
       },
-      "Microsoft.NETCore.Platforms/3.1.0": {},
+      "Microsoft.NETCore.Platforms/3.1.4": {},
       "Microsoft.Web.WebView2/1.0.2849.39": {
         "runtimeTargets": {
           "runtimes/win-arm64/native/WebView2Loader.dll": {
@@ -43,6 +44,11 @@
         "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0"
+        }
+      },
+      "Microsoft.Win32.SystemEvents/4.7.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.4"
         }
       },
       "QuestPDF/2024.10.3": {
@@ -124,6 +130,29 @@
           }
         }
       },
+      "ScottPlot/4.1.66": {
+        "dependencies": {
+          "System.Drawing.Common": "4.7.2",
+          "System.Numerics.Vectors": "4.5.0"
+        },
+        "runtime": {
+          "lib/net6.0/ScottPlot.dll": {
+            "assemblyVersion": "4.1.66.0",
+            "fileVersion": "4.1.66.0"
+          }
+        }
+      },
+      "ScottPlot.WinForms/4.1.66": {
+        "dependencies": {
+          "ScottPlot": "4.1.66"
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/ScottPlot.WinForms.dll": {
+            "assemblyVersion": "4.1.66.0",
+            "fileVersion": "4.1.66.0"
+          }
+        }
+      },
       "System.Data.SqlClient/4.8.6": {
         "dependencies": {
           "Microsoft.Win32.Registry": "4.7.0",
@@ -151,9 +180,16 @@
           }
         }
       },
+      "System.Drawing.Common/4.7.2": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "3.1.4",
+          "Microsoft.Win32.SystemEvents": "4.7.0"
+        }
+      },
+      "System.Numerics.Vectors/4.5.0": {},
       "System.Security.AccessControl/4.7.0": {
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "3.1.0",
+          "Microsoft.NETCore.Platforms": "3.1.4",
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
@@ -190,12 +226,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.NETCore.Platforms/3.1.0": {
+    "Microsoft.NETCore.Platforms/3.1.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
-      "path": "microsoft.netcore.platforms/3.1.0",
-      "hashPath": "microsoft.netcore.platforms.3.1.0.nupkg.sha512"
+      "sha512": "sha512-9/y05/CuxE+j184Nr4KihhB9KcUkvGojmD4JV4Vt/mHhVZR+eOCD5WCM+CXye9K0OFMsaPXbN+IcaIpjgBGZmg==",
+      "path": "microsoft.netcore.platforms/3.1.4",
+      "hashPath": "microsoft.netcore.platforms.3.1.4.nupkg.sha512"
     },
     "Microsoft.Web.WebView2/1.0.2849.39": {
       "type": "package",
@@ -210,6 +246,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.SystemEvents/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mtVirZr++rq+XCDITMUdnETD59XoeMxSpLRIII7JRI6Yj0LEDiO1pPn0ktlnIj12Ix8bfvQqQDMMIF9wC98oCA==",
+      "path": "microsoft.win32.systemevents/4.7.0",
+      "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
     "QuestPDF/2024.10.3": {
       "type": "package",
@@ -246,12 +289,40 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "hashPath": "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512"
     },
+    "ScottPlot/4.1.66": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/5E1DJo1uxLfr3HrkdHw+cX/j+MU9JQxFyieUtWFC1GZhHubdDCanxgLBqdYUBYxlL1AdyBrS+7OQFGk54Wc8A==",
+      "path": "scottplot/4.1.66",
+      "hashPath": "scottplot.4.1.66.nupkg.sha512"
+    },
+    "ScottPlot.WinForms/4.1.66": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DMpdVk8yCTl4qDY7SaJVrDoeu/UoHbxI7EgzrQtv/NLX0ftx5svX+6bawmuKO2eRkzLCEThtAsFLLl/PrnKemQ==",
+      "path": "scottplot.winforms/4.1.66",
+      "hashPath": "scottplot.winforms.4.1.66.nupkg.sha512"
+    },
     "System.Data.SqlClient/4.8.6": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-2Ij/LCaTQRyAi5lAv7UUTV9R2FobC8xN9mE0fXBZohum/xLl8IZVmE98Rq5ugQHjCgTBRKqpXRb4ORulRdA6Ig==",
       "path": "system.data.sqlclient/4.8.6",
       "hashPath": "system.data.sqlclient.4.8.6.nupkg.sha512"
+    },
+    "System.Drawing.Common/4.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I2y4KBK3VCvU/WqE2xv7NjQ67maXHttkFSHYKgU2evrG9Yqh0oFjfORXt5hZTk+BVjdyFo2h0/YQZsca33BGmg==",
+      "path": "system.drawing.common/4.7.2",
+      "hashPath": "system.drawing.common.4.7.2.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
     "System.Security.AccessControl/4.7.0": {
       "type": "package",

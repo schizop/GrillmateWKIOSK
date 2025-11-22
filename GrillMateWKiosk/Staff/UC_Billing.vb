@@ -1,9 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Diagnostics
 Imports System.Linq
-Imports QuestPDF.Fluent
-Imports QuestPDF.Helpers
-Imports QuestPDF.Infrastructure
 
 Public Class UC_Billing
     Private currentOrder As OrderInfo?
@@ -82,9 +79,11 @@ Public Class UC_Billing
         End If
 
         Try
-            ' Generate PDF receipt
-            Dim pdfPath As String = GeneratePdfReceipt()
-            
+            ' Generate PDF receipt using Receipt_Generator
+            Dim receiptGenerator As New Receipt_Generator()
+            Dim receiptOrderInfo = ConvertToReceiptGeneratorOrderInfo(currentOrder.Value)
+            Dim pdfPath As String = receiptGenerator.GeneratePdfReceipt(receiptOrderInfo)
+
             ' Show receipt in popup
             ShowReceiptPopup(pdfPath)
         Catch ex As Exception
@@ -92,178 +91,58 @@ Public Class UC_Billing
         End Try
     End Sub
 
-    Private Function GeneratePdfReceipt() As String
-        If Not currentOrder.HasValue Then Return ""
+    Private Function ConvertToReceiptGeneratorOrderInfo(orderInfo As OrderInfo) As Receipt_Generator.OrderInfo
+        Dim receiptOrderInfo As New Receipt_Generator.OrderInfo()
+        receiptOrderInfo.OrderID = orderInfo.OrderID
+        receiptOrderInfo.OrderNumber = orderInfo.OrderNumber
+        receiptOrderInfo.OrderDate = orderInfo.OrderDate
+        receiptOrderInfo.OrderType = orderInfo.OrderType
+        receiptOrderInfo.OrderStatus = orderInfo.OrderStatus
+        receiptOrderInfo.TableNumber = orderInfo.TableNumber
+        receiptOrderInfo.Subtotal = orderInfo.Subtotal
+        receiptOrderInfo.Discount = orderInfo.Discount
+        receiptOrderInfo.Tax = orderInfo.Tax
+        receiptOrderInfo.TotalAmount = orderInfo.TotalAmount
+        receiptOrderInfo.HasPwdDiscount = orderInfo.HasPwdDiscount
 
-        Dim orderInfo = currentOrder.Value
-        
-        ' Create PDF file path
-        Dim fileName As String = "Receipt_" & orderInfo.OrderNumber.Replace("-", "_") & "_" & DateTime.Now.ToString("yyyyMMdd_HHmmss") & ".pdf"
-        Dim pdfPath As String = System.IO.Path.Combine(My.Computer.FileSystem.SpecialDirectories.MyDocuments, fileName)
-        
-        ' Generate PDF using QuestPDF
-        QuestPDF.Settings.License = QuestPDF.Infrastructure.LicenseType.Community
-        
-        Document.Create(Sub(container)
-            container.Page(Sub(page)
-                page.Size(PageSizes.A4)
-                page.Margin(2, Unit.Centimetre)
-                page.PageColor(Colors.White)
-                
-                page.Content().Column(Sub(column)
-                    column.Spacing(0.5, Unit.Centimetre)
-                    
-                    ' Header
-                    column.Item().AlignCenter().Text("GRILL MATE POS").FontSize(20).Bold()
-                    column.Item().LineHorizontal(1).LineColor(Colors.Black)
-                    column.Item().PaddingTop(0.5, Unit.Centimetre)
-                    
-                    ' Order Information
-                    column.Item().Text("Order Number: " & orderInfo.OrderNumber)
-                    column.Item().Text("Date: " & orderInfo.OrderDate.ToString("MM/dd/yyyy HH:mm"))
-                    column.Item().Text("Type: " & orderInfo.OrderType)
-                    If orderInfo.OrderType = "Dine-In" Then
-                        column.Item().Text("Table: " & orderInfo.TableNumber)
-                    End If
-                    
-                    column.Item().PaddingTop(0.5, Unit.Centimetre)
-                    column.Item().LineHorizontal(1).LineColor(Colors.Black)
-                    column.Item().PaddingTop(0.5, Unit.Centimetre)
-                    
-                    ' Items Header
-                    column.Item().Row(Sub(row)
-                        row.RelativeItem(3).Text("Item").Bold()
-                        row.ConstantItem(50).Text("Qty").Bold().AlignCenter()
-                        row.RelativeItem(2).Text("Price").Bold().AlignRight()
-                        row.RelativeItem(2).Text("Subtotal").Bold().AlignRight()
-                    End Sub)
-                    
-                    column.Item().LineHorizontal(0.5).LineColor(Colors.Grey.Lighten2)
-                    
-                    ' Items
-                    For Each item In orderInfo.Items
-                        column.Item().Row(Sub(row)
-                            row.RelativeItem(3).Text(item.ProductName)
-                            row.ConstantItem(50).Text(item.Quantity.ToString()).AlignCenter()
-                            row.RelativeItem(2).Text("₱" & item.Price.ToString("N2")).AlignRight()
-                            row.RelativeItem(2).Text("₱" & item.Subtotal.ToString("N2")).AlignRight()
-                        End Sub)
-                    Next
-                    
-                    column.Item().PaddingTop(0.5, Unit.Centimetre)
-                    column.Item().LineHorizontal(1).LineColor(Colors.Black)
-                    column.Item().PaddingTop(0.5, Unit.Centimetre)
-                    
-                    ' Totals
-                    column.Item().Row(Sub(row)
-                        row.RelativeItem().Text("Subtotal:")
-                        row.RelativeItem().Text("₱" & orderInfo.Subtotal.ToString("N2")).AlignRight()
-                    End Sub)
-                    
-                    If orderInfo.Discount > 0 Then
-                        column.Item().Row(Sub(row)
-                            row.RelativeItem().Text("Discount (20%):")
-                            row.RelativeItem().Text("-₱" & orderInfo.Discount.ToString("N2")).AlignRight()
-                        End Sub)
-                    End If
-                    
-                    If orderInfo.Tax > 0 Then
-                        column.Item().Row(Sub(row)
-                            row.RelativeItem().Text("Tax VAT (12%):")
-                            row.RelativeItem().Text("₱" & orderInfo.Tax.ToString("N2")).AlignRight()
-                        End Sub)
-                    ElseIf orderInfo.HasPwdDiscount Then
-                        column.Item().Row(Sub(row)
-                            row.RelativeItem().Text("Tax VAT:")
-                            row.RelativeItem().Text("₱0.00 (Exempt)").AlignRight()
-                        End Sub)
-                    End If
-                    
-                    column.Item().PaddingTop(0.3, Unit.Centimetre)
-                    column.Item().LineHorizontal(1).LineColor(Colors.Black)
-                    column.Item().PaddingTop(0.3, Unit.Centimetre)
-                    
-                    column.Item().Row(Sub(row)
-                        row.RelativeItem().Text("TOTAL:").Bold().FontSize(12)
-                        row.RelativeItem().Text("₱" & orderInfo.TotalAmount.ToString("N2")).Bold().FontSize(12).AlignRight()
-                    End Sub)
-                    
-                    column.Item().PaddingTop(1, Unit.Centimetre)
-                    column.Item().AlignCenter().Text("Thank you for your business!").FontSize(10)
-                End Sub)
-            End Sub)
-        End Sub).GeneratePdf(pdfPath)
-        
-        Return pdfPath
-    End Function
-
-    Private Function GenerateReceiptText(orderInfo As OrderInfo) As String
-        Dim receipt As String = ""
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "            GRILL MATE POS              " & vbCrLf
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "Order Number: " & orderInfo.OrderNumber & vbCrLf
-        receipt &= "Date: " & orderInfo.OrderDate.ToString("MM/dd/yyyy HH:mm") & vbCrLf
-        receipt &= "Type: " & orderInfo.OrderType & vbCrLf
-        If orderInfo.OrderType = "Dine-In" Then
-            receipt &= "Table: " & orderInfo.TableNumber & vbCrLf
-        End If
-        receipt &= "-----------------------------------------" & vbCrLf
-        receipt &= "Items:" & vbCrLf
-
+        receiptOrderInfo.Items = New List(Of Receipt_Generator.OrderItemInfo)()
         For Each item In orderInfo.Items
-            receipt &= item.ProductName.PadRight(20) & vbCrLf
-            receipt &= ("  " & item.Quantity.ToString() & " x ₱" & item.Price.ToString("N2")).PadRight(15) & "₱" & item.Subtotal.ToString("N2") & vbCrLf
+            Dim receiptItem As New Receipt_Generator.OrderItemInfo()
+            receiptItem.ProductName = item.ProductName
+            receiptItem.Quantity = item.Quantity
+            receiptItem.Price = item.Price
+            receiptItem.Subtotal = item.Subtotal
+            receiptOrderInfo.Items.Add(receiptItem)
         Next
 
-        receipt &= "-----------------------------------------" & vbCrLf
-        receipt &= ("Subtotal:".PadRight(35) & "₱" & orderInfo.Subtotal.ToString("N2")) & vbCrLf
-        If orderInfo.Discount > 0 Then
-            receipt &= ("Discount (20%):".PadRight(35) & "-₱" & orderInfo.Discount.ToString("N2")) & vbCrLf
-        End If
-        If orderInfo.Tax > 0 Then
-            receipt &= ("Tax VAT (12%):".PadRight(35) & "₱" & orderInfo.Tax.ToString("N2")) & vbCrLf
-        ElseIf orderInfo.HasPwdDiscount Then
-            receipt &= ("Tax VAT:".PadRight(35) & "₱0.00 (Exempt)") & vbCrLf
-        End If
-        receipt &= ("TOTAL:".PadRight(35) & "₱" & orderInfo.TotalAmount.ToString("N2")) & vbCrLf
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "Thank you for your business!" & vbCrLf
-        receipt &= "=========================================" & vbCrLf
-        Return receipt
+        Return receiptOrderInfo
     End Function
 
-    Private Function GenerateHtmlReceipt(orderInfo As OrderInfo) As String
-        Dim html As String = "<!DOCTYPE html><html><head><title>Receipt - " & orderInfo.OrderNumber & "</title>"
-        html &= "<style>body{font-family:Arial;width:400px;margin:20px auto;padding:20px;border:1px solid #000;} "
-        html &= "h1{text-align:center;margin:10px 0;} .header{text-align:center;border-bottom:2px solid #000;padding-bottom:10px;margin-bottom:10px;} "
-        html &= "table{width:100%;border-collapse:collapse;margin:10px 0;} td{padding:5px;border-bottom:1px solid #ddd;} "
-        html &= ".total-row{font-weight:bold;border-top:2px solid #000;padding-top:10px;} .footer{text-align:center;margin-top:20px;border-top:2px solid #000;padding-top:10px;}</style></head><body>"
-        html &= "<div class='header'><h1>GRILL MATE POS</h1></div>"
-        html &= "<p><strong>Order Number:</strong> " & orderInfo.OrderNumber & "</p>"
-        html &= "<p><strong>Date:</strong> " & orderInfo.OrderDate.ToString("MM/dd/yyyy HH:mm") & "</p>"
-        html &= "<p><strong>Type:</strong> " & orderInfo.OrderType & "</p>"
-        If orderInfo.OrderType = "Dine-In" Then
-            html &= "<p><strong>Table:</strong> " & orderInfo.TableNumber & "</p>"
-        End If
-        html &= "<table><tr><th>Item</th><th>Qty</th><th>Price</th><th>Subtotal</th></tr>"
+    Private Function ConvertToReceiptPreviewOrderInfo(orderInfo As OrderInfo) As ReceiptPreviewControl.OrderInfo
+        Dim receiptOrderInfo As New ReceiptPreviewControl.OrderInfo()
+        receiptOrderInfo.OrderID = orderInfo.OrderID
+        receiptOrderInfo.OrderNumber = orderInfo.OrderNumber
+        receiptOrderInfo.OrderDate = orderInfo.OrderDate
+        receiptOrderInfo.OrderType = orderInfo.OrderType
+        receiptOrderInfo.OrderStatus = orderInfo.OrderStatus
+        receiptOrderInfo.TableNumber = orderInfo.TableNumber
+        receiptOrderInfo.Subtotal = orderInfo.Subtotal
+        receiptOrderInfo.Discount = orderInfo.Discount
+        receiptOrderInfo.Tax = orderInfo.Tax
+        receiptOrderInfo.TotalAmount = orderInfo.TotalAmount
+        receiptOrderInfo.HasPwdDiscount = orderInfo.HasPwdDiscount
+
+        receiptOrderInfo.Items = New List(Of ReceiptPreviewControl.OrderItemInfo)()
         For Each item In orderInfo.Items
-            html &= "<tr><td>" & item.ProductName & "</td><td>" & item.Quantity & "</td><td>₱" & item.Price.ToString("N2") & "</td><td>₱" & item.Subtotal.ToString("N2") & "</td></tr>"
+            Dim receiptItem As New ReceiptPreviewControl.OrderItemInfo()
+            receiptItem.ProductName = item.ProductName
+            receiptItem.Quantity = item.Quantity
+            receiptItem.Price = item.Price
+            receiptItem.Subtotal = item.Subtotal
+            receiptOrderInfo.Items.Add(receiptItem)
         Next
-        html &= "</table>"
-        html &= "<div class='total-row'><p>Subtotal: ₱" & orderInfo.Subtotal.ToString("N2") & "</p>"
-        If orderInfo.Discount > 0 Then
-            html &= "<p>Discount (20%): -₱" & orderInfo.Discount.ToString("N2") & "</p>"
-        End If
-        If orderInfo.Tax > 0 Then
-            html &= "<p>Tax VAT (12%): ₱" & orderInfo.Tax.ToString("N2") & "</p>"
-        ElseIf orderInfo.HasPwdDiscount Then
-            html &= "<p>Tax VAT: ₱0.00 (Exempt)</p>"
-        End If
-        html &= "<p>TOTAL: ₱" & orderInfo.TotalAmount.ToString("N2") & "</p></div>"
-        html &= "<div class='footer'><p>Thank you for your business!</p></div>"
-        html &= "</body></html>"
-        Return html
+
+        Return receiptOrderInfo
     End Function
 
     Private Sub ShowReceiptPopup(filePath As String)
@@ -332,17 +211,17 @@ Public Class UC_Billing
 
                     ' Get order items using helper method
                     orderInfo.Items = GetOrderItems(orderInfo.OrderID)
-                    
+
                     ' If subtotal wasn't stored, calculate from items
                     If orderInfo.Subtotal = 0 Then
                         orderInfo.Subtotal = orderInfo.Items.Sum(Function(item) item.Subtotal)
                     End If
-                    
+
                     ' If discount/tax weren't stored, try to calculate or get from payment
                     If orderInfo.TotalAmount = 0 Then
                         ' Try to get paid amount from Payments table if order is paid
                         Dim paidAmount As Decimal = GetPaidAmount(orderInfo.OrderID)
-                        
+
                         If paidAmount > 0 Then
                             ' Use paid amount to calculate discount/tax
                             CalculateDiscountAndTax(orderInfo, paidAmount)
@@ -415,16 +294,16 @@ Public Class UC_Billing
 
                             ' Get order items using helper method
                             orderInfo.Items = GetOrderItems(orderInfo.OrderID)
-                            
+
                             ' If subtotal wasn't stored, calculate from items
                             If orderInfo.Subtotal = 0 Then
                                 orderInfo.Subtotal = orderInfo.Items.Sum(Function(item) item.Subtotal)
                             End If
-                            
+
                             ' If discount/tax weren't stored, try to calculate or get from payment
                             If orderInfo.TotalAmount = 0 Then
                                 Dim paidAmount As Decimal = GetPaidAmount(orderInfo.OrderID)
-                                
+
                                 If paidAmount > 0 Then
                                     CalculateDiscountAndTax(orderInfo, paidAmount)
                                 Else
@@ -499,27 +378,27 @@ Public Class UC_Billing
 
     Private Sub CalculateDiscountAndTax(ByRef orderInfo As OrderInfo, totalAmount As Decimal)
         orderInfo.TotalAmount = totalAmount
-        
+
         If orderInfo.Subtotal <= 0 Then
             orderInfo.Discount = 0
             orderInfo.Tax = 0
             orderInfo.HasPwdDiscount = False
             Return
         End If
-        
+
         ' Calculate expected totals for both scenarios
         Dim withDiscount As Decimal = orderInfo.Subtotal * 0.8D
         Dim withTax As Decimal = orderInfo.Subtotal * 1.12D
         Dim withNeither As Decimal = orderInfo.Subtotal
-        
+
         ' Calculate the difference from each expected total
         Dim diffFromDiscount As Decimal = Math.Abs(totalAmount - withDiscount)
         Dim diffFromTax As Decimal = Math.Abs(totalAmount - withTax)
         Dim diffFromNeither As Decimal = Math.Abs(totalAmount - withNeither)
-        
+
         ' Use a tolerance of 0.50 (50 centavos) for rounding differences
         Dim tolerance As Decimal = 0.5D
-        
+
         ' Determine which pattern matches best
         ' Priority: Check discount first (most specific pattern)
         If diffFromDiscount <= tolerance OrElse (diffFromDiscount < diffFromTax AndAlso diffFromDiscount < diffFromNeither) Then
@@ -620,39 +499,10 @@ Public Class UC_Billing
     Private Sub GenerateReceiptPreview()
         If Not currentOrder.HasValue Then Return
 
-        Dim orderInfo = currentOrder.Value
-        Dim receipt As String = ""
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "            GRILL MATE POS              " & vbCrLf
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "Order Number: " & orderInfo.OrderNumber & vbCrLf
-        receipt &= "Date: " & orderInfo.OrderDate.ToString("MM/dd/yyyy HH:mm") & vbCrLf
-        receipt &= "Type: " & orderInfo.OrderType & vbCrLf
-        If orderInfo.OrderType = "Dine-In" Then
-            receipt &= "Table: " & orderInfo.TableNumber & vbCrLf
-        End If
-        receipt &= "-----------------------------------------" & vbCrLf
-        receipt &= "Items:" & vbCrLf
-
-        For Each item In orderInfo.Items
-            receipt &= item.ProductName.PadRight(20) & vbCrLf
-            receipt &= ("  " & item.Quantity.ToString() & " x ₱" & item.Price.ToString("N2")).PadRight(15) & "₱" & item.Subtotal.ToString("N2") & vbCrLf
-        Next
-
-        receipt &= "-----------------------------------------" & vbCrLf
-        receipt &= ("Subtotal:".PadRight(35) & "₱" & orderInfo.Subtotal.ToString("N2")) & vbCrLf
-        If orderInfo.Discount > 0 Then
-            receipt &= ("Discount (20%):".PadRight(35) & "-₱" & orderInfo.Discount.ToString("N2")) & vbCrLf
-        End If
-        If orderInfo.Tax > 0 Then
-            receipt &= ("Tax VAT (12%):".PadRight(35) & "₱" & orderInfo.Tax.ToString("N2")) & vbCrLf
-        ElseIf orderInfo.HasPwdDiscount Then
-            receipt &= ("Tax VAT:".PadRight(35) & "₱0.00 (Exempt)") & vbCrLf
-        End If
-        receipt &= ("TOTAL:".PadRight(35) & "₱" & orderInfo.TotalAmount.ToString("N2")) & vbCrLf
-        receipt &= "=========================================" & vbCrLf
-        receipt &= "Thank you for your business!" & vbCrLf
-        receipt &= "=========================================" & vbCrLf
+        ' Use ReceiptPreviewControl to generate preview
+        Dim receiptPreview As New ReceiptPreviewControl()
+        Dim receiptOrderInfo = ConvertToReceiptPreviewOrderInfo(currentOrder.Value)
+        Dim receipt As String = receiptPreview.GenerateReceiptText(receiptOrderInfo)
 
         txtReceiptPreview.Text = receipt
     End Sub

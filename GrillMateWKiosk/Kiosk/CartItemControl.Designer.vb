@@ -139,7 +139,7 @@ Partial Class CartItemControl
         Controls.Add(btnRemove)
         Margin = New Padding(2)
         Name = "CartItemControl"
-        Size = New Size(286, 67)
+        Size = New Size(275, 67)
         ResumeLayout(False)
 
     End Sub

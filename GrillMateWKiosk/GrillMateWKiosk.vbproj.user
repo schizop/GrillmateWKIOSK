@@ -1,13 +1,40 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="Admin\AdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Admin_OrderHistory.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Admin\ManageMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\RegisterUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Admin\Users.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Kiosk\CategoryControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Kiosk\DineInOrTakeout.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Kiosk\MenuDashboardForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Staff\UC_Analytics.vb">
+    <Compile Update="Kiosk\ProductCardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Kiosk\TableCardControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\ReceiptPreviewControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Staff\ReservationCard.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Staff\UC_Billing.vb">
@@ -16,10 +43,10 @@
     <Compile Update="Staff\UC_Delivery.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Staff\UC_OrderHistory.vb">
+    <Compile Update="Staff\UC_ManualOrderEntry.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Staff\UC_Reservation.vb">
+    <Compile Update="Staff\UC_OrderHistory.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Kiosk\CartItemControl.vb">
@@ -39,6 +66,9 @@
     </Compile>
     <Compile Update="Staff\StaffMenuDashboard.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Staff\UC_Reservation.vb">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Staff\UC_TableManagement.vb">
       <SubType>UserControl</SubType>

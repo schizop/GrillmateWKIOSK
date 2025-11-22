@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[2024.10.3, )"
             },
+            "ScottPlot.WinForms": {
+              "target": "Package",
+              "version": "[4.1.66, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.6, )"

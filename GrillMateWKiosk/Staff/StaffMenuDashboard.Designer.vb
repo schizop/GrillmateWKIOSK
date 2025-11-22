@@ -27,6 +27,7 @@ Partial Class StaffMenuDashboard
     Friend WithEvents ReportingAnalyticsButton As System.Windows.Forms.Button
     Friend WithEvents ReservationPageButton As System.Windows.Forms.Button
     Friend WithEvents DeliveryPageButton As System.Windows.Forms.Button
+    Friend WithEvents ManualOrderButton As System.Windows.Forms.Button
     Friend WithEvents ContentPanel As System.Windows.Forms.Panel
 
     'NOTE: The following procedure is required by the Windows Form Designer
@@ -38,6 +39,7 @@ Partial Class StaffMenuDashboard
         LogoLabel = New Label()
         LogoutButton = New Button()
         NavigationPanel = New Panel()
+        ManualOrderButton = New Button()
         DeliveryPageButton = New Button()
         ReservationPageButton = New Button()
         ReportingAnalyticsButton = New Button()
@@ -92,6 +94,7 @@ Partial Class StaffMenuDashboard
         ' 
         NavigationPanel.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         NavigationPanel.BackColor = Color.FromArgb(CByte(52), CByte(73), CByte(94))
+        NavigationPanel.Controls.Add(ManualOrderButton)
         NavigationPanel.Controls.Add(DeliveryPageButton)
         NavigationPanel.Controls.Add(ReservationPageButton)
         NavigationPanel.Controls.Add(ReportingAnalyticsButton)
@@ -116,6 +119,20 @@ Partial Class StaffMenuDashboard
         DeliveryPageButton.TabIndex = 5
         DeliveryPageButton.Text = "Delivery Page"
         DeliveryPageButton.UseVisualStyleBackColor = False
+        '
+        ' ManualOrderButton
+        '
+        ManualOrderButton.BackColor = Color.FromArgb(CByte(46), CByte(204), CByte(113))
+        ManualOrderButton.FlatAppearance.BorderSize = 0
+        ManualOrderButton.FlatStyle = FlatStyle.Flat
+        ManualOrderButton.Font = New Font("Segoe UI", 11F, FontStyle.Bold)
+        ManualOrderButton.ForeColor = Color.White
+        ManualOrderButton.Location = New Point(12, 351)
+        ManualOrderButton.Name = "ManualOrderButton"
+        ManualOrderButton.Size = New Size(230, 50)
+        ManualOrderButton.TabIndex = 6
+        ManualOrderButton.Text = "Manual Order Entry"
+        ManualOrderButton.UseVisualStyleBackColor = False
         ' 
         ' ReservationPageButton
         ' 

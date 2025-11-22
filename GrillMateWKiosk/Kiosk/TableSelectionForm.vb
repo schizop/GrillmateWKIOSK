@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Drawing
 
 Public Class TableSelectionForm
     Private selectedTableID As Integer = 0
@@ -9,98 +10,70 @@ Public Class TableSelectionForm
     End Sub
 
     Private Sub LoadTables()
-        ' Clear existing buttons
+        ' Clear existing controls
         pnlTableGrid.Controls.Clear()
 
         Try
             Dim query As String = "SELECT TableID, TableNumber, Status FROM Tables ORDER BY TableNumber"
             Using reader As SqlDataReader = DatabaseConnection.ExecuteReader(query)
-                        Dim buttonCount As Integer = 0
-                        Dim buttonsPerRow As Integer = 4
-                        Dim buttonWidth As Integer = 300
-                        Dim buttonHeight As Integer = 200
-                        Dim buttonSpacing As Integer = 15
-                        
-                        ' Calculate panel dimensions
-                        Dim panelWidth As Integer = pnlTableGrid.Width - pnlTableGrid.Padding.Left - pnlTableGrid.Padding.Right
-                        
-                        ' Calculate total width needed for all buttons in a row
-                        Dim totalButtonWidth As Integer = (buttonsPerRow * buttonWidth) + ((buttonsPerRow - 1) * buttonSpacing)
-                        
-                        ' Calculate starting X position to center the buttons
-                        Dim startX As Integer = Math.Max(20, (panelWidth - totalButtonWidth) \ 2)
+                Dim controlCount As Integer = 0
+                Dim controlsPerRow As Integer = 4
+                Dim controlWidth As Integer = 300
+                Dim controlHeight As Integer = 200
+                Dim controlSpacing As Integer = 15
+
+                ' Calculate panel dimensions
+                Dim panelWidth As Integer = pnlTableGrid.Width - pnlTableGrid.Padding.Left - pnlTableGrid.Padding.Right
+
+                ' Calculate total width needed for all controls in a row
+                Dim totalControlWidth As Integer = (controlsPerRow * controlWidth) + ((controlsPerRow - 1) * controlSpacing)
+
+                ' Calculate starting X position to center the controls
+                Dim startX As Integer = Math.Max(20, (panelWidth - totalControlWidth) \ 2)
 
                 ' Calculate starting Y position 
                 Dim startY As Integer = 20
 
-                        While reader.Read()
-                            Dim tableID As Integer = reader("TableID")
-                            Dim tableNumber As String = reader("TableNumber").ToString()
-                            Dim status As String = reader("Status").ToString()
+                While reader.Read()
+                    Dim tableID As Integer = reader("TableID")
+                    Dim tableNumber As String = reader("TableNumber").ToString()
+                    Dim status As String = reader("Status").ToString()
 
-                            ' Create button
-                            Dim btnTable As New Button()
-                            btnTable.Text = "TABLE " & tableNumber
-                            btnTable.Tag = tableID
-                            btnTable.Size = New Size(buttonWidth, buttonHeight)
-                            btnTable.Font = New Font("Segoe UI", 12, FontStyle.Bold)
-                            btnTable.FlatStyle = FlatStyle.Flat
-                            btnTable.FlatAppearance.BorderSize = 2
-                            btnTable.Cursor = Cursors.Hand
+                    ' Create table card control
+                    Dim tableCard As New TableCardControl()
+                    tableCard.TableId = tableID
+                    tableCard.TableNumber = tableNumber
+                    tableCard.Status = status
+                    tableCard.Size = New Size(controlWidth, controlHeight)
+                    tableCard.Cursor = Cursors.Hand
 
-                            ' Calculate position
-                            Dim row As Integer = buttonCount \ buttonsPerRow
-                            Dim col As Integer = buttonCount Mod buttonsPerRow
-                            btnTable.Location = New Point(
-                                startX + col * (buttonWidth + buttonSpacing),
-                                startY + row * (buttonHeight + buttonSpacing)
+                    ' Calculate position
+                    Dim row As Integer = controlCount \ controlsPerRow
+                    Dim col As Integer = controlCount Mod controlsPerRow
+                    tableCard.Location = New Point(
+                                startX + col * (controlWidth + controlSpacing),
+                                startY + row * (controlHeight + controlSpacing)
                             )
 
+                    ' Add event handler
+                    AddHandler tableCard.TableSelected, AddressOf TableCard_TableSelected
 
-                    Select Case status.ToLower()
-                                Case "vacant"
-                                    btnTable.BackColor = Color.FromArgb(46, 204, 113)
-                                    btnTable.ForeColor = Color.White
-                                    btnTable.FlatAppearance.BorderColor = Color.FromArgb(39, 174, 96)
-                                    btnTable.Enabled = True
-                                Case "occupied"
-                                    btnTable.BackColor = Color.FromArgb(231, 76, 60)
-                                    btnTable.ForeColor = Color.White
-                                    btnTable.FlatAppearance.BorderColor = Color.FromArgb(192, 57, 43)
-                                    btnTable.Enabled = False
-                                Case "reserved"
-                                    btnTable.BackColor = Color.FromArgb(241, 196, 15)
-                                    btnTable.ForeColor = Color.White
-                                    btnTable.FlatAppearance.BorderColor = Color.FromArgb(230, 126, 34)
-                                    btnTable.Enabled = False
-                                Case Else
-                                    btnTable.BackColor = Color.FromArgb(149, 165, 166)
-                                    btnTable.ForeColor = Color.White
-                                    btnTable.FlatAppearance.BorderColor = Color.FromArgb(127, 140, 141)
-                                    btnTable.Enabled = False
-                            End Select
+                    pnlTableGrid.Controls.Add(tableCard)
+                    controlCount += 1
+                End While
 
+                ' Now center all controls vertically
+                Dim totalRows As Integer = Math.Ceiling(controlCount / controlsPerRow)
+                Dim totalControlHeight As Integer = (totalRows * controlHeight) + ((totalRows - 1) * controlSpacing)
+                Dim panelHeight As Integer = pnlTableGrid.Height - pnlTableGrid.Padding.Top - pnlTableGrid.Padding.Bottom
+                Dim centeredStartY As Integer = Math.Max(20, (panelHeight - totalControlHeight) \ 2)
 
-                    If status.ToLower() = "vacant" Then
-                                AddHandler btnTable.Click, AddressOf TableButton_Click
-                            End If
-
-                            pnlTableGrid.Controls.Add(btnTable)
-                            buttonCount += 1
-                        End While
-                        
-                        ' Now center all buttons vertically
-                        Dim totalRows As Integer = Math.Ceiling(buttonCount / buttonsPerRow)
-                        Dim totalButtonHeight As Integer = (totalRows * buttonHeight) + ((totalRows - 1) * buttonSpacing)
-                        Dim panelHeight As Integer = pnlTableGrid.Height - pnlTableGrid.Padding.Top - pnlTableGrid.Padding.Bottom
-                        Dim centeredStartY As Integer = Math.Max(20, (panelHeight - totalButtonHeight) \ 2)
-                        
-                        ' Adjust all button positions vertically
-                        For Each ctrl As Control In pnlTableGrid.Controls
-                            If TypeOf ctrl Is Button Then
-                                ctrl.Location = New Point(ctrl.Location.X, ctrl.Location.Y - startY + centeredStartY)
-                            End If
-                        Next
+                ' Adjust all control positions vertically
+                For Each ctrl As Control In pnlTableGrid.Controls
+                    If TypeOf ctrl Is TableCardControl Then
+                        ctrl.Location = New Point(ctrl.Location.X, ctrl.Location.Y - startY + centeredStartY)
+                    End If
+                Next
 
             End Using
         Catch ex As SqlException
@@ -116,9 +89,8 @@ Public Class TableSelectionForm
         End Try
     End Sub
 
-    Private Sub TableButton_Click(sender As Object, e As EventArgs)
-        Dim clickedButton As Button = DirectCast(sender, Button)
-        selectedTableID = Convert.ToInt32(clickedButton.Tag)
+    Private Sub TableCard_TableSelected(sender As Object, e As TableSelectedEventArgs)
+        selectedTableID = e.TableId
 
         ' Navigate to MenuDashboardForm
         Dim menuForm As New MenuDashboardForm()

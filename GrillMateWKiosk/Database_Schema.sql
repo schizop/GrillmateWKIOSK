@@ -71,12 +71,13 @@ CREATE TABLE Payments (
 
 CREATE TABLE Reservations (
     ReservationID INT IDENTITY(1,1) PRIMARY KEY,
-    TableID INT FOREIGN KEY REFERENCES Tables(TableID),
-    CustomerName NVARCHAR(100) NOT NULL,
-    ContactNumber NVARCHAR(20) NOT NULL,
-    ReservationDate DATETIME NOT NULL,
-    NumberOfGuests INT DEFAULT 1,
-    Status NVARCHAR(20) DEFAULT 'Reserved'
+    TableID INT FOREIGN KEY REFERENCES Tables(TableID), -- Retained Foreign Key
+    CustomerName NVARCHAR(100),
+    PhoneNumber NVARCHAR(20),
+    DateReserved DATE,
+    TimeSlot NVARCHAR(20),
+    Guests INT,
+    SpecialRequest NVARCHAR(200)
 );
 
 CREATE TABLE Deliveries (

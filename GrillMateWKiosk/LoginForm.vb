@@ -40,8 +40,10 @@ Public Class LoginForm
                 staffDashboard.Show()
                 Me.Hide()
             ElseIf userRole = "admin" Then
-                ' Navigate to Admin Dashboard (you can implement this later)
-                MessageBox.Show("Admin dashboard functionality will be implemented soon.", "Admin Access", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                ' Navigate to Admin Dashboard
+                Dim adminForm As New AdminForm()
+                adminForm.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("Invalid user role: " & userRole, "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If

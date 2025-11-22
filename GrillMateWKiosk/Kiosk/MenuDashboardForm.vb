@@ -33,15 +33,15 @@ Public Class MenuDashboardForm
 
     Private Sub LoadCategories()
         flpCategories.Controls.Clear()
-        
-        ' Add "All" button first
-        CreateCategoryButton(0, "All")
-        
+
+        ' Add "All" category control first
+        CreateCategoryControl(0, "All")
+
         Try
             Dim query As String = "SELECT CategoryID, CategoryName FROM MenuCategories ORDER BY CategoryName"
             Using reader As SqlDataReader = DatabaseConnection.ExecuteReader(query)
                 While reader.Read()
-                    CreateCategoryButton(reader("CategoryID"), reader("CategoryName").ToString())
+                    CreateCategoryControl(reader("CategoryID"), reader("CategoryName").ToString())
                 End While
             End Using
         Catch ex As Exception
@@ -49,31 +49,22 @@ Public Class MenuDashboardForm
         End Try
     End Sub
 
-    Private Sub CreateCategoryButton(categoryId As Integer, categoryName As String)
-        Dim btnCategory As New Button()
-        btnCategory.Size = New Size(140, 50)
-        btnCategory.Text = categoryName
-        btnCategory.Font = New Font("Arial", 12, FontStyle.Bold)
-        btnCategory.BackColor = Color.White
-        btnCategory.ForeColor = Color.FromArgb(33, 37, 41)
-        btnCategory.FlatStyle = FlatStyle.Flat
-        btnCategory.FlatAppearance.BorderSize = 1
-        btnCategory.FlatAppearance.BorderColor = Color.LightGray
-        btnCategory.Cursor = Cursors.Hand
-        btnCategory.Margin = New Padding(5)
-        btnCategory.Tag = categoryId
+    Private Sub CreateCategoryControl(categoryId As Integer, categoryName As String)
+        Dim categoryControl As New CategoryControl()
+        categoryControl.CategoryId = categoryId
+        categoryControl.CategoryName = categoryName
+        categoryControl.Size = New Size(140, 50)
 
-        AddHandler btnCategory.Click, AddressOf CategoryButton_Click
-        flpCategories.Controls.Add(btnCategory)
+        AddHandler categoryControl.CategorySelected, AddressOf CategoryControl_CategorySelected
+        flpCategories.Controls.Add(categoryControl)
     End Sub
 
-    Private Sub CategoryButton_Click(sender As Object, e As EventArgs)
-        Dim clickedButton As Button = DirectCast(sender, Button)
-        selectedCategoryId = Convert.ToInt32(clickedButton.Tag)
-        
-        ' Highlight selected button
-        HighlightSelectedCategory(clickedButton)
-        
+    Private Sub CategoryControl_CategorySelected(sender As Object, e As CategorySelectedEventArgs)
+        selectedCategoryId = e.CategoryId
+
+        ' Highlight selected category control
+        HighlightSelectedCategory(DirectCast(sender, CategoryControl))
+
         ' Load products
         If selectedCategoryId = 0 Then
             LoadAllProducts()
@@ -82,17 +73,11 @@ Public Class MenuDashboardForm
         End If
     End Sub
 
-    Private Sub HighlightSelectedCategory(selectedBtn As Button)
+    Private Sub HighlightSelectedCategory(selectedControl As CategoryControl)
         For Each ctrl As Control In flpCategories.Controls
-            If TypeOf ctrl Is Button Then
-                Dim btn As Button = DirectCast(ctrl, Button)
-                If btn Is selectedBtn Then
-                    btn.BackColor = Color.FromArgb(255, 193, 7)
-                    btn.ForeColor = Color.White
-                Else
-                    btn.BackColor = Color.White
-                    btn.ForeColor = Color.FromArgb(33, 37, 41)
-                End If
+            If TypeOf ctrl Is CategoryControl Then
+                Dim catControl As CategoryControl = DirectCast(ctrl, CategoryControl)
+                catControl.IsSelected = (catControl Is selectedControl)
             End If
         Next
     End Sub
@@ -134,75 +119,19 @@ Public Class MenuDashboardForm
     End Sub
 
     Private Sub CreateProductCard(productId As Integer, productName As String, description As String, price As Decimal, categoryName As String)
-        Dim pnlCard As New Panel()
-        pnlCard.Size = New Size(180, 220)
-        pnlCard.BackColor = Color.White
-        pnlCard.BorderStyle = BorderStyle.FixedSingle
-        pnlCard.Margin = New Padding(10)
-        pnlCard.Cursor = Cursors.Hand
-
-        ' Product Image Placeholder
-        Dim picProduct As New PictureBox()
-        picProduct.Size = New Size(160, 100)
-        picProduct.Location = New Point(10, 10)
-        picProduct.BackColor = Color.LightGray
-        picProduct.SizeMode = PictureBoxSizeMode.StretchImage
-        picProduct.BorderStyle = BorderStyle.FixedSingle
-
-        ' Product Name
-        Dim lblName As New Label()
-        lblName.Text = productName
-        lblName.Font = New Font("Arial", 12, FontStyle.Bold)
-        lblName.Location = New Point(10, 120)
-        lblName.Size = New Size(160, 20)
-        lblName.ForeColor = Color.FromArgb(33, 37, 41)
-
-        ' Product Description
-        Dim lblDescription As New Label()
-        lblDescription.Text = If(description.Length > 40, description.Substring(0, 40) & "...", description)
-        lblDescription.Font = New Font("Arial", 9)
-        lblDescription.Location = New Point(10, 145)
-        lblDescription.Size = New Size(160, 30)
-        lblDescription.ForeColor = Color.Gray
-
-        ' Product Price
-        Dim lblPrice As New Label()
-        lblPrice.Text = "₱" & price.ToString("N2")
-        lblPrice.Font = New Font("Arial", 14, FontStyle.Bold)
-        lblPrice.Location = New Point(10, 180)
-        lblPrice.Size = New Size(80, 25)
-        lblPrice.ForeColor = Color.FromArgb(40, 167, 69)
-
-        ' Add to Cart Button
-        Dim btnAdd As New Button()
-        btnAdd.Text = "Add"
-        btnAdd.Font = New Font("Arial", 10, FontStyle.Bold)
-        btnAdd.Size = New Size(60, 30)
-        btnAdd.Location = New Point(110, 180)
-        btnAdd.BackColor = Color.FromArgb(40, 167, 69)
-        btnAdd.ForeColor = Color.White
-        btnAdd.FlatStyle = FlatStyle.Flat
-        btnAdd.FlatAppearance.BorderSize = 0
-        btnAdd.Cursor = Cursors.Hand
-        btnAdd.Tag = productId
-
-        AddHandler btnAdd.Click, AddressOf AddToCart_Click
-        AddHandler pnlCard.Click, AddressOf AddToCart_Click
-
-        pnlCard.Controls.AddRange({picProduct, lblName, lblDescription, lblPrice, btnAdd})
-        flpProducts.Controls.Add(pnlCard)
+        Dim productCard As New ProductCardControl()
+        productCard.ProductId = productId
+        productCard.ProductName = productName
+        productCard.Description = description
+        productCard.Price = price
+        
+        AddHandler productCard.AddToCartClicked, AddressOf ProductCard_AddToCartClicked
+        
+        flpProducts.Controls.Add(productCard)
     End Sub
 
-    Private Sub AddToCart_Click(sender As Object, e As EventArgs)
-        Dim productId As Integer
-        If TypeOf sender Is Button Then
-            productId = Convert.ToInt32(CType(sender, Button).Tag)
-        Else
-            ' Find the button in the panel
-            Dim panel As Panel = DirectCast(sender, Panel)
-            Dim btnAdd As Button = DirectCast(panel.Controls.OfType(Of Button)().First(), Button)
-            productId = Convert.ToInt32(btnAdd.Tag)
-        End If
+    Private Sub ProductCard_AddToCartClicked(sender As Object, e As ProductCardEventArgs)
+        Dim productId As Integer = e.ProductId
 
         Try
             Dim query As String = "SELECT ProductName, Price FROM Products WHERE ProductID = @ProductID"

@@ -25,6 +25,7 @@ Partial Class UC_OrderHistory
         lblTitle = New Label()
         pnlSearchFilter = New Panel()
         btnRefresh = New Button()
+        btnShowAll = New Button()
         btnClearFilters = New Button()
         dtpDateTo = New DateTimePicker()
         lblDateTo = New Label()
@@ -40,7 +41,10 @@ Partial Class UC_OrderHistory
         txtSearch = New TextBox()
         lblSearch = New Label()
         pnlOrders = New Panel()
+        lblOrderDetails = New Label()
         lblOrderCount = New Label()
+        splitContainer = New SplitContainer()
+        pnlOrdersList = New Panel()
         dgvOrders = New DataGridView()
         colOrderID = New DataGridViewTextBoxColumn()
         colOrderNumber = New DataGridViewTextBoxColumn()
@@ -53,9 +57,22 @@ Partial Class UC_OrderHistory
         colTax = New DataGridViewTextBoxColumn()
         colTotalAmount = New DataGridViewTextBoxColumn()
         colOrderStatus = New DataGridViewTextBoxColumn()
+        pnlOrderDetails = New Panel()
+        dgvOrderDetails = New DataGridView()
+        colDetailProductName = New DataGridViewTextBoxColumn()
+        colDetailQuantity = New DataGridViewTextBoxColumn()
+        colDetailPrice = New DataGridViewTextBoxColumn()
+        colDetailSubtotal = New DataGridViewTextBoxColumn()
         pnlSearchFilter.SuspendLayout()
         pnlOrders.SuspendLayout()
+        CType(splitContainer, ComponentModel.ISupportInitialize).BeginInit()
+        splitContainer.Panel1.SuspendLayout()
+        splitContainer.Panel2.SuspendLayout()
+        splitContainer.SuspendLayout()
+        pnlOrdersList.SuspendLayout()
         CType(dgvOrders, ComponentModel.ISupportInitialize).BeginInit()
+        pnlOrderDetails.SuspendLayout()
+        CType(dgvOrderDetails, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' lblTitle
@@ -74,6 +91,7 @@ Partial Class UC_OrderHistory
         pnlSearchFilter.BackColor = Color.FromArgb(CByte(236), CByte(240), CByte(241))
         pnlSearchFilter.BorderStyle = BorderStyle.FixedSingle
         pnlSearchFilter.Controls.Add(btnRefresh)
+        pnlSearchFilter.Controls.Add(btnShowAll)
         pnlSearchFilter.Controls.Add(btnClearFilters)
         pnlSearchFilter.Controls.Add(dtpDateTo)
         pnlSearchFilter.Controls.Add(lblDateTo)
@@ -92,7 +110,7 @@ Partial Class UC_OrderHistory
         pnlSearchFilter.Location = New Point(0, 0)
         pnlSearchFilter.Name = "pnlSearchFilter"
         pnlSearchFilter.Padding = New Padding(20)
-        pnlSearchFilter.Size = New Size(1200, 180)
+        pnlSearchFilter.Size = New Size(1670, 180)
         pnlSearchFilter.TabIndex = 1
         ' 
         ' btnRefresh
@@ -102,12 +120,26 @@ Partial Class UC_OrderHistory
         btnRefresh.FlatStyle = FlatStyle.Flat
         btnRefresh.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         btnRefresh.ForeColor = Color.White
-        btnRefresh.Location = New Point(659, 124)
+        btnRefresh.Location = New Point(789, 124)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(120, 30)
-        btnRefresh.TabIndex = 14
+        btnRefresh.TabIndex = 15
         btnRefresh.Text = "Refresh"
         btnRefresh.UseVisualStyleBackColor = False
+        ' 
+        ' btnShowAll
+        ' 
+        btnShowAll.BackColor = Color.FromArgb(CByte(52), CByte(152), CByte(219))
+        btnShowAll.FlatAppearance.BorderSize = 0
+        btnShowAll.FlatStyle = FlatStyle.Flat
+        btnShowAll.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
+        btnShowAll.ForeColor = Color.White
+        btnShowAll.Location = New Point(659, 124)
+        btnShowAll.Name = "btnShowAll"
+        btnShowAll.Size = New Size(120, 30)
+        btnShowAll.TabIndex = 14
+        btnShowAll.Text = "Show All"
+        btnShowAll.UseVisualStyleBackColor = False
         ' 
         ' btnClearFilters
         ' 
@@ -265,24 +297,64 @@ Partial Class UC_OrderHistory
         ' pnlOrders
         ' 
         pnlOrders.Controls.Add(lblOrderCount)
-        pnlOrders.Controls.Add(dgvOrders)
+        pnlOrders.Controls.Add(splitContainer)
         pnlOrders.Dock = DockStyle.Fill
         pnlOrders.Location = New Point(0, 180)
         pnlOrders.Name = "pnlOrders"
         pnlOrders.Padding = New Padding(20)
-        pnlOrders.Size = New Size(1200, 620)
+        pnlOrders.Size = New Size(1670, 840)
         pnlOrders.TabIndex = 2
+        ' 
+        ' lblOrderDetails
+        ' 
+        lblOrderDetails.AutoSize = True
+        lblOrderDetails.Font = New Font("Segoe UI", 12F, FontStyle.Bold)
+        lblOrderDetails.ForeColor = Color.FromArgb(CByte(52), CByte(73), CByte(94))
+        lblOrderDetails.Location = New Point(10, 10)
+        lblOrderDetails.Name = "lblOrderDetails"
+        lblOrderDetails.Size = New Size(240, 21)
+        lblOrderDetails.TabIndex = 1
+        lblOrderDetails.Text = "Order Details (Select an order)"
         ' 
         ' lblOrderCount
         ' 
         lblOrderCount.AutoSize = True
         lblOrderCount.Font = New Font("Segoe UI", 10F, FontStyle.Bold)
         lblOrderCount.ForeColor = Color.FromArgb(CByte(52), CByte(73), CByte(94))
-        lblOrderCount.Location = New Point(20, 0)
+        lblOrderCount.Location = New Point(20, -2)
         lblOrderCount.Name = "lblOrderCount"
         lblOrderCount.Size = New Size(108, 19)
         lblOrderCount.TabIndex = 1
         lblOrderCount.Text = "Total Orders: 0"
+        ' 
+        ' splitContainer
+        ' 
+        splitContainer.Dock = DockStyle.Fill
+        splitContainer.Location = New Point(20, 20)
+        splitContainer.Name = "splitContainer"
+        ' 
+        ' splitContainer.Panel1
+        ' 
+        splitContainer.Panel1.Controls.Add(pnlOrdersList)
+        splitContainer.Panel1MinSize = 400
+        ' 
+        ' splitContainer.Panel2
+        ' 
+        splitContainer.Panel2.Controls.Add(pnlOrderDetails)
+        splitContainer.Panel2MinSize = 300
+        splitContainer.Size = New Size(1630, 800)
+        splitContainer.SplitterDistance = 1200
+        splitContainer.TabIndex = 0
+        ' 
+        ' pnlOrdersList
+        ' 
+        pnlOrdersList.Controls.Add(dgvOrders)
+        pnlOrdersList.Dock = DockStyle.Fill
+        pnlOrdersList.Location = New Point(0, 0)
+        pnlOrdersList.Name = "pnlOrdersList"
+        pnlOrdersList.Padding = New Padding(10)
+        pnlOrdersList.Size = New Size(1200, 800)
+        pnlOrdersList.TabIndex = 0
         ' 
         ' dgvOrders
         ' 
@@ -294,12 +366,12 @@ Partial Class UC_OrderHistory
         dgvOrders.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dgvOrders.Columns.AddRange(New DataGridViewColumn() {colOrderID, colOrderNumber, colOrderDate, colOrderType, colTableNumber, colPaymentMethod, colSubtotal, colDiscount, colTax, colTotalAmount, colOrderStatus})
         dgvOrders.Dock = DockStyle.Fill
-        dgvOrders.Location = New Point(20, 20)
+        dgvOrders.Location = New Point(10, 10)
         dgvOrders.MultiSelect = False
         dgvOrders.Name = "dgvOrders"
         dgvOrders.ReadOnly = True
         dgvOrders.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        dgvOrders.Size = New Size(1160, 580)
+        dgvOrders.Size = New Size(1180, 780)
         dgvOrders.TabIndex = 0
         ' 
         ' colOrderID
@@ -380,6 +452,63 @@ Partial Class UC_OrderHistory
         colOrderStatus.Name = "colOrderStatus"
         colOrderStatus.ReadOnly = True
         ' 
+        ' pnlOrderDetails
+        ' 
+        pnlOrderDetails.Controls.Add(lblOrderDetails)
+        pnlOrderDetails.Controls.Add(dgvOrderDetails)
+        pnlOrderDetails.Dock = DockStyle.Fill
+        pnlOrderDetails.Location = New Point(0, 0)
+        pnlOrderDetails.Name = "pnlOrderDetails"
+        pnlOrderDetails.Padding = New Padding(10)
+        pnlOrderDetails.Size = New Size(426, 800)
+        pnlOrderDetails.TabIndex = 0
+        ' 
+        ' dgvOrderDetails
+        ' 
+        dgvOrderDetails.AllowUserToAddRows = False
+        dgvOrderDetails.AllowUserToDeleteRows = False
+        dgvOrderDetails.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        dgvOrderDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dgvOrderDetails.BackgroundColor = Color.White
+        dgvOrderDetails.BorderStyle = BorderStyle.Fixed3D
+        dgvOrderDetails.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dgvOrderDetails.Columns.AddRange(New DataGridViewColumn() {colDetailProductName, colDetailQuantity, colDetailPrice, colDetailSubtotal})
+        dgvOrderDetails.Location = New Point(10, 40)
+        dgvOrderDetails.MultiSelect = False
+        dgvOrderDetails.Name = "dgvOrderDetails"
+        dgvOrderDetails.ReadOnly = True
+        dgvOrderDetails.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvOrderDetails.Size = New Size(406, 750)
+        dgvOrderDetails.TabIndex = 0
+        ' 
+        ' colDetailProductName
+        ' 
+        colDetailProductName.DataPropertyName = "ProductName"
+        colDetailProductName.HeaderText = "Product Name"
+        colDetailProductName.Name = "colDetailProductName"
+        colDetailProductName.ReadOnly = True
+        ' 
+        ' colDetailQuantity
+        ' 
+        colDetailQuantity.DataPropertyName = "Quantity"
+        colDetailQuantity.HeaderText = "Quantity"
+        colDetailQuantity.Name = "colDetailQuantity"
+        colDetailQuantity.ReadOnly = True
+        ' 
+        ' colDetailPrice
+        ' 
+        colDetailPrice.DataPropertyName = "Price"
+        colDetailPrice.HeaderText = "Price"
+        colDetailPrice.Name = "colDetailPrice"
+        colDetailPrice.ReadOnly = True
+        ' 
+        ' colDetailSubtotal
+        ' 
+        colDetailSubtotal.DataPropertyName = "Subtotal"
+        colDetailSubtotal.HeaderText = "Subtotal"
+        colDetailSubtotal.Name = "colDetailSubtotal"
+        colDetailSubtotal.ReadOnly = True
+        ' 
         ' UC_OrderHistory
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
@@ -389,12 +518,20 @@ Partial Class UC_OrderHistory
         Controls.Add(pnlSearchFilter)
         Controls.Add(lblTitle)
         Name = "UC_OrderHistory"
-        Size = New Size(1200, 800)
+        Size = New Size(1670, 1020)
         pnlSearchFilter.ResumeLayout(False)
         pnlSearchFilter.PerformLayout()
         pnlOrders.ResumeLayout(False)
         pnlOrders.PerformLayout()
+        splitContainer.Panel1.ResumeLayout(False)
+        splitContainer.Panel2.ResumeLayout(False)
+        CType(splitContainer, ComponentModel.ISupportInitialize).EndInit()
+        splitContainer.ResumeLayout(False)
+        pnlOrdersList.ResumeLayout(False)
         CType(dgvOrders, ComponentModel.ISupportInitialize).EndInit()
+        pnlOrderDetails.ResumeLayout(False)
+        pnlOrderDetails.PerformLayout()
+        CType(dgvOrderDetails, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -416,6 +553,7 @@ Partial Class UC_OrderHistory
     Friend WithEvents dtpDateTo As DateTimePicker
     Friend WithEvents btnClearFilters As Button
     Friend WithEvents btnRefresh As Button
+    Friend WithEvents btnShowAll As Button
     Friend WithEvents pnlOrders As Panel
     Friend WithEvents dgvOrders As DataGridView
     Friend WithEvents colOrderID As DataGridViewTextBoxColumn
@@ -430,4 +568,13 @@ Partial Class UC_OrderHistory
     Friend WithEvents colTotalAmount As DataGridViewTextBoxColumn
     Friend WithEvents colOrderStatus As DataGridViewTextBoxColumn
     Friend WithEvents lblOrderCount As Label
+    Friend WithEvents splitContainer As SplitContainer
+    Friend WithEvents pnlOrderDetails As Panel
+    Friend WithEvents dgvOrderDetails As DataGridView
+    Friend WithEvents colDetailProductName As DataGridViewTextBoxColumn
+    Friend WithEvents colDetailQuantity As DataGridViewTextBoxColumn
+    Friend WithEvents colDetailPrice As DataGridViewTextBoxColumn
+    Friend WithEvents colDetailSubtotal As DataGridViewTextBoxColumn
+    Friend WithEvents lblOrderDetails As Label
+    Friend WithEvents pnlOrdersList As Panel
 End Class

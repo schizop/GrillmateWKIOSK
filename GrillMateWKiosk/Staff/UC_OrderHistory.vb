@@ -4,6 +4,7 @@ Imports System.Data
 Public Class UC_OrderHistory
     Private orderData As New DataTable()
     Private isInitializing As Boolean = True
+    Private useDateFilter As Boolean = False
 
     Private Sub UC_OrderHistory_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -18,12 +19,13 @@ Public Class UC_OrderHistory
                 cmbOrderStatus.SelectedIndex = 0
             End If
             
-            ' Set default date range to show all orders (10 years ago to today)
-            dtpDateFrom.Value = DateTime.Now.AddYears(-10)
+            ' Set default date range (not applied until user filters)
+            dtpDateFrom.Value = DateTime.Now
             dtpDateTo.Value = DateTime.Now
             
-            ' Configure DataGridView
+            ' Configure DataGridViews
             ConfigureDataGridView()
+            ConfigureOrderDetailsGridView()
             
             ' Mark initialization as complete
             isInitializing = False
@@ -43,6 +45,8 @@ Public Class UC_OrderHistory
         dgvOrders.ReadOnly = True
         dgvOrders.AllowUserToAddRows = False
         dgvOrders.AllowUserToDeleteRows = False
+        dgvOrders.AllowUserToResizeColumns = False
+        dgvOrders.AllowUserToResizeRows = False
         dgvOrders.MultiSelect = False
         dgvOrders.RowHeadersVisible = False
         
@@ -67,6 +71,32 @@ Public Class UC_OrderHistory
         colTax.Width = 100
         colTotalAmount.Width = 120
         colOrderStatus.Width = 100
+    End Sub
+
+    Private Sub ConfigureOrderDetailsGridView()
+        ' Set up order details DataGridView
+        dgvOrderDetails.AutoGenerateColumns = False
+        dgvOrderDetails.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        dgvOrderDetails.ReadOnly = True
+        dgvOrderDetails.AllowUserToAddRows = False
+        dgvOrderDetails.AllowUserToDeleteRows = False
+        dgvOrderDetails.AllowUserToResizeColumns = False
+        dgvOrderDetails.AllowUserToResizeRows = False
+        dgvOrderDetails.MultiSelect = False
+        dgvOrderDetails.RowHeadersVisible = False
+        
+        ' Format currency columns
+        colDetailPrice.DefaultCellStyle.Format = "P#,##0.00"
+        colDetailSubtotal.DefaultCellStyle.Format = "P#,##0.00"
+        colDetailSubtotal.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        
+        ' Set column widths - Product Name takes most space
+        colDetailProductName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill
+        colDetailQuantity.Width = 80
+        colDetailQuantity.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter
+        colDetailPrice.Width = 100
+        colDetailPrice.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight
+        colDetailSubtotal.Width = 120
     End Sub
 
     Private Sub LoadOrders()
@@ -95,9 +125,11 @@ Public Class UC_OrderHistory
                 parameters.Add(DatabaseConnection.CreateParameter("@OrderStatus", cmbOrderStatus.SelectedItem.ToString()))
             End If
 
-            ' Add date range filters
-            parameters.Add(DatabaseConnection.CreateParameter("@DateFrom", dtpDateFrom.Value.Date))
-            parameters.Add(DatabaseConnection.CreateParameter("@DateTo", dtpDateTo.Value.Date.AddDays(1).AddSeconds(-1)))
+            ' Add date range filters if enabled
+            If useDateFilter Then
+                parameters.Add(DatabaseConnection.CreateParameter("@DateFrom", dtpDateFrom.Value.Date))
+                parameters.Add(DatabaseConnection.CreateParameter("@DateTo", dtpDateTo.Value.Date.AddDays(1).AddSeconds(-1)))
+            End If
 
             ' Execute query
             Dim sqlParams As SqlParameter() = Nothing
@@ -173,7 +205,12 @@ Public Class UC_OrderHistory
                              "ISNULL(o.TotalAmount, 0) AS TotalAmount " &
                              "FROM Orders o " &
                              "LEFT JOIN Tables t ON o.TableID = t.TableID " &
-                             "WHERE o.CreatedAt >= @DateFrom AND o.CreatedAt <= @DateTo"
+                             "WHERE 1 = 1"
+
+        ' Add date filters only when requested
+        If useDateFilter Then
+            query &= " AND o.CreatedAt >= @DateFrom AND o.CreatedAt <= @DateTo"
+        End If
 
         ' Add search filter
         If Not String.IsNullOrWhiteSpace(txtSearch.Text) Then
@@ -306,18 +343,21 @@ Public Class UC_OrderHistory
 
     Private Sub dtpDateFrom_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateFrom.ValueChanged
         If Not isInitializing Then
+            useDateFilter = True
             LoadOrders()
         End If
     End Sub
 
     Private Sub dtpDateTo_ValueChanged(sender As Object, e As EventArgs) Handles dtpDateTo.ValueChanged
         If Not isInitializing Then
+            useDateFilter = True
             LoadOrders()
         End If
     End Sub
 
     Private Sub btnClearFilters_Click(sender As Object, e As EventArgs) Handles btnClearFilters.Click
         ' Reset all filters to show all orders
+        isInitializing = True
         txtSearch.Clear()
         If cmbPaymentMethod.Items.Count > 0 Then
             cmbPaymentMethod.SelectedIndex = 0
@@ -328,16 +368,88 @@ Public Class UC_OrderHistory
         If cmbOrderStatus.Items.Count > 0 Then
             cmbOrderStatus.SelectedIndex = 0
         End If
-        ' Set date range to show all orders (10 years ago to today)
-        dtpDateFrom.Value = DateTime.Now.AddYears(-10)
+        ' Set date range back to defaults (not applied until filter enabled)
+        dtpDateFrom.Value = DateTime.Now
         dtpDateTo.Value = DateTime.Now
-        
+        isInitializing = False
+        useDateFilter = False
+
         ' Reload orders
         LoadOrders()
     End Sub
 
     Private Sub btnRefresh_Click(sender As Object, e As EventArgs) Handles btnRefresh.Click
         LoadOrders()
+    End Sub
+
+    Private Sub btnShowAll_Click(sender As Object, e As EventArgs) Handles btnShowAll.Click
+        useDateFilter = False
+        LoadOrders()
+    End Sub
+
+    Private Sub dgvOrders_SelectionChanged(sender As Object, e As EventArgs) Handles dgvOrders.SelectionChanged
+        If dgvOrders.SelectedRows.Count > 0 AndAlso orderData IsNot Nothing AndAlso orderData.Rows.Count > 0 Then
+            Dim selectedRow As DataGridViewRow = dgvOrders.SelectedRows(0)
+            Dim rowIndex As Integer = selectedRow.Index
+            If rowIndex >= 0 AndAlso rowIndex < orderData.Rows.Count Then
+                Dim orderId As Integer = Convert.ToInt32(orderData.Rows(rowIndex)("OrderID"))
+                LoadOrderDetails(orderId)
+            End If
+        Else
+            ' Clear order details if no row is selected
+            dgvOrderDetails.DataSource = Nothing
+            lblOrderDetails.Text = "Order Details (Select an order)"
+        End If
+    End Sub
+
+    Private Sub LoadOrderDetails(orderId As Integer)
+        Try
+            Dim detailsData As New DataTable()
+            detailsData.Columns.Add("ProductName", GetType(String))
+            detailsData.Columns.Add("Quantity", GetType(Integer))
+            detailsData.Columns.Add("Price", GetType(Decimal))
+            detailsData.Columns.Add("Subtotal", GetType(Decimal))
+
+            Dim query As String = "SELECT p.ProductName, oi.Quantity, oi.Price, oi.Subtotal " &
+                                 "FROM OrderItems oi " &
+                                 "INNER JOIN Products p ON oi.ProductID = p.ProductID " &
+                                 "WHERE oi.OrderID = @OrderID " &
+                                 "ORDER BY oi.OrderItemID"
+
+            Dim parameters() As SqlParameter = {
+                DatabaseConnection.CreateParameter("@OrderID", orderId)
+            }
+
+            Using reader As SqlDataReader = DatabaseConnection.ExecuteReader(query, parameters)
+                While reader.Read()
+                    Dim row As DataRow = detailsData.NewRow()
+                    row("ProductName") = reader.GetString("ProductName")
+                    row("Quantity") = reader.GetInt32("Quantity")
+                    row("Price") = reader.GetDecimal("Price")
+                    row("Subtotal") = reader.GetDecimal("Subtotal")
+                    detailsData.Rows.Add(row)
+                End While
+            End Using
+
+            ' Bind to DataGridView
+            dgvOrderDetails.DataSource = detailsData
+
+            ' Update label with order number
+            Dim orderNumber As String = ""
+            If dgvOrders.SelectedRows.Count > 0 AndAlso orderData IsNot Nothing Then
+                Dim selectedRow As DataGridViewRow = dgvOrders.SelectedRows(0)
+                Dim rowIndex As Integer = selectedRow.Index
+                If rowIndex >= 0 AndAlso rowIndex < orderData.Rows.Count Then
+                    orderNumber = orderData.Rows(rowIndex)("OrderNumber").ToString()
+                End If
+            End If
+            lblOrderDetails.Text = "Order Details - " & orderNumber & " (" & detailsData.Rows.Count & " items)"
+
+        Catch ex As Exception
+            MessageBox.Show("Error loading order details: " & ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            dgvOrderDetails.DataSource = Nothing
+            lblOrderDetails.Text = "Order Details (Error loading)"
+        End Try
     End Sub
 
 End Class

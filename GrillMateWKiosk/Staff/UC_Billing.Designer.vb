@@ -66,7 +66,7 @@ Partial Class UC_Billing
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Segoe UI", 28F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         lblTitle.ForeColor = Color.FromArgb(CByte(52), CByte(73), CByte(94))
-        lblTitle.Location = New Point(33, 26)
+        lblTitle.Location = New Point(141, 24)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(137, 51)
         lblTitle.TabIndex = 0
@@ -79,7 +79,7 @@ Partial Class UC_Billing
         pnlOrderInput.Controls.Add(btnSearchOrder)
         pnlOrderInput.Controls.Add(txtOrderNumber)
         pnlOrderInput.Controls.Add(lblOrderNumber)
-        pnlOrderInput.Location = New Point(33, 96)
+        pnlOrderInput.Location = New Point(141, 95)
         pnlOrderInput.Name = "pnlOrderInput"
         pnlOrderInput.Size = New Size(800, 120)
         pnlOrderInput.TabIndex = 1
@@ -125,7 +125,7 @@ Partial Class UC_Billing
         pnlOrderDetails.Controls.Add(lstOrderItems)
         pnlOrderDetails.Controls.Add(lblOrderInfo)
         pnlOrderDetails.Controls.Add(lblTotalAmount)
-        pnlOrderDetails.Location = New Point(33, 236)
+        pnlOrderDetails.Location = New Point(141, 235)
         pnlOrderDetails.Name = "pnlOrderDetails"
         pnlOrderDetails.Size = New Size(800, 500)
         pnlOrderDetails.TabIndex = 2
@@ -191,7 +191,7 @@ Partial Class UC_Billing
         pnlPayment.Controls.Add(radGCash)
         pnlPayment.Controls.Add(radCash)
         pnlPayment.Controls.Add(lblPaymentMethod)
-        pnlPayment.Location = New Point(883, 96)
+        pnlPayment.Location = New Point(991, 95)
         pnlPayment.Name = "pnlPayment"
         pnlPayment.Size = New Size(500, 250)
         pnlPayment.TabIndex = 3
@@ -255,7 +255,7 @@ Partial Class UC_Billing
         pnlReceiptPreview.Controls.Add(btnPrintReceipt)
         pnlReceiptPreview.Controls.Add(txtReceiptPreview)
         pnlReceiptPreview.Controls.Add(lblReceiptPreview)
-        pnlReceiptPreview.Location = New Point(883, 376)
+        pnlReceiptPreview.Location = New Point(991, 375)
         pnlReceiptPreview.Name = "pnlReceiptPreview"
         pnlReceiptPreview.Size = New Size(500, 360)
         pnlReceiptPreview.TabIndex = 4
@@ -306,7 +306,7 @@ Partial Class UC_Billing
         pnlRecentOrders.Controls.Add(lstRecentOrders)
         pnlRecentOrders.Controls.Add(btnRefreshRecent)
         pnlRecentOrders.Controls.Add(lblRecentOrders)
-        pnlRecentOrders.Location = New Point(33, 762)
+        pnlRecentOrders.Location = New Point(141, 761)
         pnlRecentOrders.Name = "pnlRecentOrders"
         pnlRecentOrders.Size = New Size(1350, 250)
         pnlRecentOrders.TabIndex = 5
@@ -390,9 +390,9 @@ Partial Class UC_Billing
         Controls.Add(pnlOrderDetails)
         Controls.Add(pnlOrderInput)
         Controls.Add(lblTitle)
-        MinimumSize = New Size(1450, 1050)
+        MinimumSize = New Size(1670, 1020)
         Name = "UC_Billing"
-        Size = New Size(1450, 1050)
+        Size = New Size(1670, 1050)
         pnlOrderInput.ResumeLayout(False)
         pnlOrderInput.PerformLayout()
         pnlOrderDetails.ResumeLayout(False)
